@@ -23,6 +23,20 @@
 ●	This starts the server and listens for connections on port 3000. The callback function logs a message when the server starts listening.
 # Test the Server:
 Open a web browser and navigate to http://localhost:3000. You should see the message "Hello, World!" displayed on the page.
+# Code
+```
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello, World!\n');
+});
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});
+
+```
 
 # OUTPUT
 ![alt text](Output.png)
